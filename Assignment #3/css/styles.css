@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+#reservetable {
+  color: black;
+}
 .row-header {
   margin: 0px auto;
   padding: 0px auto;
@@ -34,4 +40,24 @@ body {
 
 .navbar-dark {
   background-color: #512da8;
+}
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 10px 10px 10px;
+}
+
+.carousel {
+  background: #512da8;
+}
+.carousel-item {
+  height: 300px;
+}
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
 }
