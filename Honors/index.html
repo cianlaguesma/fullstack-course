@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <title>Restaurant Picker</title>
+    </head>
+    <body>
+        <img src="images/restaurant.jpg" id="bg" alt="restaurant">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand mr-auto" href="#">
+                <img src="images/15417.png" height="30px" width="30px">
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbartoggle"
+                aria-controls="navbartoggle"
+                aria-expanded="false"
+                aria-label="Toggle Nav"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbartoggle">
+                <ul class="nav navbar-nav navbar-right ml-auto mr-3" id="nav-list">
+                    <li id="navItem1" class="nav-item mr-5">
+                        <a class="nav-link" href="restaurants.html">Restaurants</a>
+                    </li>
+                    <li id="navItem2" class="nav-item active mr-5">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mainContent" class="container">
+            <div class="row row-content">
+                <div class="col-md-12">
+                    <h1 id="midText">
+                        Search up a Restaurant in your Area!
+                    </h1>
+                </div>
+                <div class="col-md-1" id="searchColumn">
+                    <label for="searchBar">
+                        <img id="searchImage" src="images/search.png">
+                    </label>
+                </div>
+                <div class="col-md-11 col-sm-12" id="searchCol">
+                    <input
+                        id="searchBar"
+                        name="searchBar"
+                        type="text"
+                        placeholder=""
+                        onkeyup="myFunction()"
+                    >
+                </div>
+                <div class="offset-md-1 col-md-11">
+                    <ul id="restaurantUL">
+                        <li>
+                            <a href="restaurants.html">Katipunan</a>
+                        </li>
+                        <li>
+                            <a href="restaurants.html">Quezon City</a>
+                        </li>
+                        <li>
+                            <a href="restaurants.html">Taft</a>
+                        </li>
+                        <li>
+                            <a href="restaurants.html">Loyola</a>
+                        </li>
+                        <li>
+                            <a href="restaurants.html">Davao City</a>
+                        </li>
+                        <li>
+                            <a href="restaurants.html">Sunrise City</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

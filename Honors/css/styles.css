@@ -1,0 +1,333 @@
+* {
+  font-family: "Open Sans", sans-serif !important;
+}
+#midText {
+  font-size: 3em;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.5;
+}
+#mainContent {
+  position: fixed;
+  top: 50%;
+  left: 15%;
+  margin-top: -100px;
+}
+#midText {
+  margin-left: 50px;
+}
+#searchImage {
+  height: 100px;
+  width: 100px;
+}
+#searchColumn {
+  position: relative;
+  top: 0;
+  left: -7%;
+}
+#searchBar {
+  width: 135%;
+  height: 80px;
+
+  border-radius: 12px;
+  border: 0px solid;
+  margin-left: -50px;
+  padding-left: 10px;
+  background: #efe7e7;
+}
+#restaurantUL {
+  margin-left: -50px;
+  padding: 0;
+  list-style: none;
+}
+#restaurantUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block;
+  height: 50px;
+  width: 100%;
+}
+#restaurantUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+#searchBar:focus {
+  outline: none;
+}
+#city {
+  font-size: 20px;
+}
+#Jollibee1 {
+  border-radius: 12px;
+  width: 371px;
+  height: 371px;
+  background: white;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+#Jollibee2 {
+  border-radius: 12px;
+  width: 371px;
+  height: 371px;
+  background: white;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+#Jollibee3 {
+  border-radius: 12px;
+  width: 371px;
+  height: 371px;
+  background: white;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+#restaurantsContent > .row > .col-md-4 > .col-md-12 hr {
+  border: 1px black solid;
+  border-radius: 12px;
+}
+#restaurants {
+  text-align: left;
+}
+#restaurants li {
+  margin-top: 15px;
+  color: black;
+}
+#restaurants a {
+  color: black;
+}
+#restaurants a:hover {
+  color: blue;
+}
+#jollibeeMenu {
+  width: 1636px;
+  height: 725px;
+  background: white;
+  border-radius: 25px;
+}
+#jollibeeMenu .row {
+  margin-top: 40px;
+}
+#jollibeeMenu .col-md-3 {
+  margin-top: 40px;
+}
+#jollibeeMenu .col-lg-2 {
+  margin-top: 40px;
+}
+
+#jollibeeContent h1 {
+  font-size: 56px;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* End Home Page */
+  #searchImage {
+    visibility: collapse;
+  }
+  #restaurantUL {
+    margin-left: -80px;
+  }
+  #restaurantUL li a {
+    padding: 8px; /* Add some padding */
+    font-size: 14px; /* Increase the font-size */
+    width: 80%;
+  }
+  #midText {
+    margin-left: 0px;
+    font-size: 30px;
+  }
+  #searchBar {
+    width: 90%;
+    margin-left: -80px;
+  }
+  #jollibeeMenu .row {
+    margin-top: 0px;
+  }
+  #jollibeeMenu {
+    height: 820px;
+  }
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  #searchImage {
+    visibility: collapse;
+    display: none;
+  }
+  #restaurantUL {
+    margin-left: -60px;
+  }
+  #restaurantUL li a {
+    padding: 8px; /* Add some padding */
+    font-size: 14px; /* Increase the font-size */
+    width: 81%;
+  }
+  #midText {
+    margin-left: 0px;
+    font-size: 30px;
+  }
+  #searchBar {
+    width: 90%;
+    margin-left: -65px;
+  }
+  #jollibeeMenu .col-sm-4 {
+    margin-top: 20px;
+  }
+  #jollibeeMenu .row {
+    margin-top: 0px;
+  }
+
+  #jollibeeContent h1 {
+    font-size: 40px;
+  }
+}
+
+/********** Extra small devices only **********/
+@media (min-width: 577px) and (max-width: 767px) {
+  #searchImage {
+    visibility: collapse;
+    display: none;
+  }
+  #restaurantUL {
+    margin-left: 0px;
+  }
+  #restaurantUL li a {
+    padding: 8px; /* Add some padding */
+    font-size: 14px; /* Increase the font-size */
+    width: 90%;
+  }
+  #searchColumn {
+    display: none;
+  }
+  #midText {
+    margin-left: 0px;
+    font-size: 20px;
+  }
+  #searchBar {
+    width: 90%;
+    margin-left: 0px;
+    height: 50px;
+  }
+  #navbartoggle li {
+    text-align: center;
+  }
+  #Jollibee1 {
+    border-radius: 12px;
+    width: 100%;
+    height: 371px;
+    background: white;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  #Jollibee2 {
+    border-radius: 12px;
+    width: 100%;
+    height: 371px;
+    background: white;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  #Jollibee3 {
+    border-radius: 12px;
+    width: 100%;
+    height: 371px;
+    background: white;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  #jollibeeMenu .row {
+    margin-top: 0px;
+  }
+  #jollibeeContent h1 {
+    font-size: 30px;
+  }
+  #jollibeeMenu {
+    height: 1000px;
+  }
+}
+
+@media (max-width: 576px) {
+  #searchImage {
+    visibility: collapse;
+    display: none;
+  }
+  #restaurantUL {
+    margin-left: 0px;
+  }
+  #restaurantUL li a {
+    padding: 8px; /* Add some padding */
+    font-size: 14px; /* Increase the font-size */
+    width: 80%;
+  }
+  #mainContent {
+    padding-left: 0;
+    top: 55%;
+  }
+  #searchColumn {
+    display: none;
+  }
+  #searchBar {
+    height: 30px;
+  }
+  #midText {
+    margin-left: 0px;
+    font-size: 15px;
+  }
+  #searchBar {
+    width: 80%;
+    margin-left: 0px;
+  }
+  #navbartoggle li {
+    text-align: center;
+  }
+  #Jollibee1 {
+    border-radius: 12px;
+    width: 100%;
+    height: 371px;
+    background: white;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  #Jollibee2 {
+    border-radius: 12px;
+    width: 100%;
+    height: 371px;
+    background: white;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  #Jollibee3 {
+    border-radius: 12px;
+    width: 100%;
+    height: 371px;
+    background: white;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  #jollibeeMenu .row {
+    margin-top: 0px;
+  }
+  #jollibeeContent h1 {
+    font-size: 20px;
+  }
+  #jollibeeMenu {
+    height: 2850px;
+    text-align: center;
+  }
+}
