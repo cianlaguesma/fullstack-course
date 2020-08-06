@@ -9,6 +9,7 @@ import {
   BreadcrumbItem,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import CommentForm from "./CommentFormComponent";
 function RenderDish({ dish }) {
   return (
     <div key={dish.id} className="col-12 col-md-5 m-1">
@@ -38,6 +39,7 @@ function RenderComments({ comments }) {
     <div className="col-12 col-md-5 m-1">
       <h4>Comments</h4>
       <ListGroup>{commentSection}</ListGroup>
+      <CommentForm />
     </div>
   );
 }
