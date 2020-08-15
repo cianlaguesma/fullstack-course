@@ -18,6 +18,8 @@ import {
 import { Link } from "react-router-dom";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Loading } from "./LoadingComponent";
+import { baseUrl } from "../shared/baseUrl";
+import { FadeTransform, Fade, Stagger } from "react-animation-components";
 const required = (val) => val && val.length;
 // len is the number specified and val is the value inputted
 const maxLength = (len) => (val) => !val || val.length <= len;
@@ -25,11 +27,16 @@ const minLength = (len) => (val) => val && val.length >= len;
 function RenderDish({ dish }) {
   return (
     <div key={dish.id} className="col-12 col-md-5 m-1">
-      <Card>
-        <CardImg width="100%" src={dish.image} alt={dish.name} />
-        <CardText className="p-2 font-weight-bold">{dish.name}</CardText>
-        <CardText className="p-2">{dish.description}</CardText>
-      </Card>
+      <FadeTransform
+        in
+        transformProps={{ exitTransform: "scale(0.5) translateY(-50%)" }}
+      >
+        <Card>
+          <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
+          <CardText className="p-2 font-weight-bold">{dish.name}</CardText>
+          <CardText className="p-2">{dish.description}</CardText>
+        </Card>
+      </FadeTransform>
     </div>
   );
 }
@@ -50,7 +57,7 @@ class CommentForm extends Component {
   handleSubmit(values) {
     this.toggleModal();
     console.log(values);
-    this.props.addComment(
+    this.props.postComment(
       this.props.dishId,
       values.rating,
       values.name,
@@ -149,24 +156,30 @@ class CommentForm extends Component {
     );
   }
 }
-function RenderComments({ comments, addComment, dishId }) {
+function RenderComments({ comments, postComment, dishId }) {
   const commentSection = comments.map((comment) => {
     return (
-      <ListGroupItem key={comment.id}>
-        {comment.comment} <br></br> {comment.author}{" "}
-        {new Intl.DateTimeFormat("en-US", {
-          year: "numeric",
-          month: "short",
-          day: "2-digit",
-        }).format(new Date(Date.parse(comment.date)))}
-      </ListGroupItem>
+      <Fade in>
+        <ListGroupItem key={comment.id}>
+          {comment.comment} <br></br> {comment.author}{" "}
+          {new Intl.DateTimeFormat("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "2-digit",
+          }).format(new Date(Date.parse(comment.date)))}
+        </ListGroupItem>
+      </Fade>
     );
   });
   return (
     <div className="col-12 col-md-5 m-1">
       <h4>Comments</h4>
-      <ListGroup>{commentSection}</ListGroup>
-      <CommentForm dishId={dishId} addComment={addComment} />
+
+      <ListGroup>
+        <Stagger in>{commentSection}</Stagger>
+      </ListGroup>
+
+      <CommentForm dishId={dishId} postComment={postComment} />
     </div>
   );
 }
@@ -208,7 +221,7 @@ const DishDetail = (props) => {
           <RenderDish dish={props.dish} />
           <RenderComments
             comments={props.comments}
-            addComment={props.addComment}
+            postComment={props.postComment}
             dishId={props.dish.id}
           />
         </div>
